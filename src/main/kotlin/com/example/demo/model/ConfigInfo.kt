@@ -1,10 +1,10 @@
 package com.example.demo.model
 
-data class Configuration(val id: Int, val initialStep: Int, val steps : Map<Int,Step>){
+data class ConfigInfo(val id: Int, val initialStep: Int, val steps : Map<Int,Step>){
 
     override fun toString() : String {
         var r = "id : $id, \n" +
-            "initialStep : $initialStep, \n"
+                "initialStep : $initialStep, \n"
 
         steps?.forEach { (i,s) -> r += "id : $id, $s \n" }
 
