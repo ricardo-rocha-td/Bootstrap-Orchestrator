@@ -3,12 +3,12 @@ package com.example.demo.model
 data class ConfigInfo(val id: Int, val initialStep: Int, val steps : Map<Int,Step>){
 
     override fun toString() : String {
-        var r = "id : $id, \n" +
+        var output = "id : $id, \n" +
                 "initialStep : $initialStep, \n"
 
-        steps.forEach { (_,s) -> r += "id : $id, $s \n" }
+        steps.forEach { (_,next) -> output += "id : $id, $next \n" }
 
-        return r
+        return output
     }
 
 
@@ -17,11 +17,11 @@ data class ConfigInfo(val id: Int, val initialStep: Int, val steps : Map<Int,Ste
 data class Step(val name: String, val transaction : Int?){
 
     override fun toString(): String {
-        var r =  "name : $name, "
+        var output =  "name : $name, "
 
         if (transaction != null)
-            r += "transaction : $transaction"
+            output += "transaction : $transaction"
 
-        return r
+        return output
     }
 }
