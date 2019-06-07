@@ -6,7 +6,7 @@ data class ConfigInfo(val id: Int, val initialStep: Int, val steps : Map<Int,Ste
         var r = "id : $id, \n" +
                 "initialStep : $initialStep, \n"
 
-        steps?.forEach { (i,s) -> r += "id : $id, $s \n" }
+        steps.forEach { (_,s) -> r += "id : $id, $s \n" }
 
         return r
     }
